@@ -3,4 +3,4 @@ public/
 build/fusio/
 cache/
 vendor/
-log/
+log
