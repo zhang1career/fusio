@@ -7,8 +7,8 @@ return [
 
     // OAuth2 access token expiration settings. How long can you use an access token and the refresh token. After the
     // expiration a user either need to use a refresh token to extend the token or request a new token
-    'fusio_expire_token'       => 'P2D',
-    'fusio_expire_refresh'     => 'P3D',
+    'fusio_expire_token'       => env('APP_TOKEN_EXPIRE')->string(),
+    'fusio_expire_refresh'     => env('APP_REFRESH_EXPIRE')->string(),
 
     // Optional a tenant id of you Fusio instance. This can be used to run multiple clients on the same Fusio
     // installation. All database entries are separated by the provided tenant id
