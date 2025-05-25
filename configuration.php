@@ -81,7 +81,7 @@ return [
 
     // Folder locations
     'psx_path_cache'           => __DIR__ . '/cache',
-    'psx_path_log'             => '/var/log/app/fusio',
+    'psx_path_log'             => '/var/log/project/fusio',
     'psx_path_public'          => __DIR__ . '/public',
     'psx_path_src'             => __DIR__ . '/src',
 
