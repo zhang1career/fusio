@@ -34,7 +34,8 @@
   "require": {
     "php": ">=8.1",
     "fusio/impl": "^8.3.2.0",
-    "fusio/adapter-http": "^6.0.8.0"
+    "fusio/adapter-http": "^6.0.8.0",
+    "symfony/redis-messenger": "7.1.*"
   },
   "repositories": [
     {
