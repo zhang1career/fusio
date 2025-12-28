@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "342d65c108afa60bc7aa64355213cc23",
+    "content-hash": "19d2eedffe60b59e6f13b647677fe11a",
     "packages": [
         {
             "name": "brick/math",
@@ -1186,16 +1186,16 @@
         },
         {
             "name": "fusio/adapter-http",
-            "version": "v6.0.8.5",
+            "version": "v6.0.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-adapter-http.git",
-                "reference": "90ad51705e53e27c9df86b13b2217fd2ca087e59"
+                "reference": "abe2238986d8924c367aeb4daf5a8951272ff5ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-http/zipball/90ad51705e53e27c9df86b13b2217fd2ca087e59",
-                "reference": "90ad51705e53e27c9df86b13b2217fd2ca087e59",
+                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-http/zipball/abe2238986d8924c367aeb4daf5a8951272ff5ee",
+                "reference": "abe2238986d8924c367aeb4daf5a8951272ff5ee",
                 "shasum": ""
             },
             "require": {
@@ -1205,6 +1205,7 @@
                 "kevinrob/guzzle-cache-middleware": "^5.1",
                 "php": ">=8.1",
                 "predis/predis": "^2.1",
+                "symfony/dotenv": "^7.1",
                 "twig/twig": "^3.0"
             },
             "require-dev": {
@@ -1238,7 +1239,7 @@
                 "fusio-adapter"
             ],
             "support": {
-                "source": "https://github.com/zhang1career/fusio-adapter-http/tree/v6.0.8.5"
+                "source": "https://github.com/zhang1career/fusio-adapter-http/tree/v6.0.8.18"
             },
             "funding": [
                 {
@@ -1254,7 +1255,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-11-12T18:51:19+00:00"
+            "time": "2025-02-19T15:14:17+00:00"
         },
         {
             "name": "fusio/adapter-php",
@@ -1992,16 +1993,16 @@
         },
         {
             "name": "fusio/impl",
-            "version": "v8.3.2",
+            "version": "v8.3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-impl.git",
-                "reference": "ea654d2ec104a4753610897b37e33755f8c7746c"
+                "reference": "bb08c40b035a24c15331ff0631775398f11fc2ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/ea654d2ec104a4753610897b37e33755f8c7746c",
-                "reference": "ea654d2ec104a4753610897b37e33755f8c7746c",
+                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/bb08c40b035a24c15331ff0631775398f11fc2ee",
+                "reference": "bb08c40b035a24c15331ff0631775398f11fc2ee",
                 "shasum": ""
             },
             "require": {
@@ -2072,7 +2073,7 @@
             "description": "Fusio implementation",
             "homepage": "https://www.fusio-project.org",
             "support": {
-                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2"
+                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.4"
             },
             "funding": [
                 {
@@ -2088,7 +2089,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-11-09T17:19:25+00:00"
+            "time": "2025-05-25T10:27:20+00:00"
         },
         {
             "name": "fusio/marketplace",
@@ -9118,12 +9119,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
