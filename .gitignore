@@ -4,3 +4,5 @@ build/fusio/
 cache/
 vendor/
 log
+
+.idea/
