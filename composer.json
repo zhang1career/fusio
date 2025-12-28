@@ -33,8 +33,19 @@
   ],
   "require": {
     "php": ">=8.1",
-    "fusio/impl": "^8.0"
+    "fusio/impl": "^8.3.2.0",
+    "fusio/adapter-http": "^6.0.8.0"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-impl.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-adapter-http.git"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "App\\": "src/"
