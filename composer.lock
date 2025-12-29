@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19d2eedffe60b59e6f13b647677fe11a",
+    "content-hash": "96333be75d8af439a61147ef0b2a3954",
     "packages": [
         {
             "name": "brick/math",
@@ -1726,16 +1726,16 @@
         },
         {
             "name": "fusio/adapter-util",
-            "version": "v6.0.6",
+            "version": "v6.0.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/apioo/fusio-adapter-util.git",
-                "reference": "71b24149731c0ed2c40f8bc3f0d20d6d8c8184a3"
+                "url": "https://github.com/zhang1career/fusio-adapter-util.git",
+                "reference": "987969b231acd64b1a729cdaaf124fd7d8827706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/fusio-adapter-util/zipball/71b24149731c0ed2c40f8bc3f0d20d6d8c8184a3",
-                "reference": "71b24149731c0ed2c40f8bc3f0d20d6d8c8184a3",
+                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-util/zipball/987969b231acd64b1a729cdaaf124fd7d8827706",
+                "reference": "987969b231acd64b1a729cdaaf124fd7d8827706",
                 "shasum": ""
             },
             "require": {
@@ -1756,7 +1756,11 @@
                     "Fusio\\Adapter\\Util\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Fusio\\Adapter\\Util\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "Apache-2.0"
             ],
@@ -1773,24 +1777,23 @@
                 "fusio-adapter"
             ],
             "support": {
-                "issues": "https://github.com/apioo/fusio-adapter-util/issues",
-                "source": "https://github.com/apioo/fusio-adapter-util/tree/v6.0.6"
+                "source": "https://github.com/zhang1career/fusio-adapter-util/tree/v6.0.6.1"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/fusioapi",
-                    "type": "custom"
+                    "type": "github",
+                    "url": "https://github.com/chriskapp"
                 },
                 {
-                    "url": "https://github.com/chriskapp",
-                    "type": "github"
+                    "type": "patreon",
+                    "url": "https://www.patreon.com/fusio"
                 },
                 {
-                    "url": "https://www.patreon.com/fusio",
-                    "type": "patreon"
+                    "type": "custom",
+                    "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-08-09T17:01:34+00:00"
+            "time": "2025-12-29T03:48:01+00:00"
         },
         {
             "name": "fusio/adapter-worker",
@@ -9212,5 +9215,5 @@
         "php": ">=8.1"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
