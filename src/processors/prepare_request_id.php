@@ -23,6 +23,7 @@
  */
 
 use Fusio\Adapter\Util\Component\RequestChainStorage;
+use Fusio\Adapter\Util\Component\RequestFactory;
 use Fusio\Engine\ConnectorInterface;
 use Fusio\Engine\ContextInterface;
 use Fusio\Engine\DispatcherInterface;
@@ -37,9 +38,16 @@ use Psr\SimpleCache\CacheInterface;
 
 $actionName = 'lb_sf_snowflake';
 
+// Build a new request
+$newRequest = RequestFactory::overrideRequest(
+    $request,
+    'GET',
+    []
+);
+
 // Execute the action using processor
 try {
-    $actionResponse = $processor->execute($actionName, $request, $context);
+    $actionResponse = $processor->execute($actionName, $newRequest, $context);
 } catch (ActionNotFoundException $e) {
     throw new RuntimeException('Required action "' . $actionName . '" not found.', 0, $e);
 } catch (FactoryResolveException $e) {

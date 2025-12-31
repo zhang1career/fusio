@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96333be75d8af439a61147ef0b2a3954",
+    "content-hash": "a121e55ff1301a76751549652167d5c5",
     "packages": [
         {
             "name": "brick/math",
@@ -1726,16 +1726,16 @@
         },
         {
             "name": "fusio/adapter-util",
-            "version": "v6.0.6.1",
+            "version": "v6.0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-adapter-util.git",
-                "reference": "987969b231acd64b1a729cdaaf124fd7d8827706"
+                "reference": "e39ba2f844f8c3707f0f3d625121a521fdb9661e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-util/zipball/987969b231acd64b1a729cdaaf124fd7d8827706",
-                "reference": "987969b231acd64b1a729cdaaf124fd7d8827706",
+                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-util/zipball/e39ba2f844f8c3707f0f3d625121a521fdb9661e",
+                "reference": "e39ba2f844f8c3707f0f3d625121a521fdb9661e",
                 "shasum": ""
             },
             "require": {
@@ -1777,7 +1777,7 @@
                 "fusio-adapter"
             ],
             "support": {
-                "source": "https://github.com/zhang1career/fusio-adapter-util/tree/v6.0.6.1"
+                "source": "https://github.com/zhang1career/fusio-adapter-util/tree/v6.0.6.3"
             },
             "funding": [
                 {
@@ -1793,7 +1793,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2025-12-29T03:48:01+00:00"
+            "time": "2025-12-30T16:41:42+00:00"
         },
         {
             "name": "fusio/adapter-worker",
