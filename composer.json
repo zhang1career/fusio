@@ -33,11 +33,44 @@
   ],
   "require": {
     "php": ">=8.1",
-    "fusio/impl": "^8.0"
+    "fusio/impl": "^8.3.2.0",
+    "fusio/adapter-http": "^6.0.8.0",
+    "fusio/adapter-util": "^6.0.6.0",
+    "fusio/engine": "^6.6.1",
+    "symfony/redis-messenger": "7.1.*",
+    "zhang1career/paganini": "*"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-impl.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-adapter-http.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-adapter-util.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-engine.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/paganini.git"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "App\\": "src/"
     }
+  },
+  "config": {
+    "cache-dir": ".composer-cache",
+    "cache-vcs-dir": ".composer-cache/vcs",
+    "cache-repo-dir": ".composer-cache/repo",
+    "cache-files-dir": ".composer-cache/files"
   }
 }
