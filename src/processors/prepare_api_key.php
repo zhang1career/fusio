@@ -27,16 +27,37 @@ use Fusio\Engine\ConnectorInterface;
 use Fusio\Engine\ContextInterface;
 use Fusio\Engine\DispatcherInterface;
 use Fusio\Engine\ProcessorInterface;
+use Fusio\Engine\Request\HttpRequestHeaderConstant;
 use Fusio\Engine\RequestInterface;
 use Fusio\Engine\Response\FactoryInterface;
 use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
 
 
-$apiKey = 'test-api-key';
-
-RequestChainStorage::set('X-API-Key', $apiKey);
+// prepare api key
+$apiKey = null;
+if (RequestChainStorage::has(HttpRequestHeaderConstant::X_API_KEY_LOWER)) {
+    $apiKey = RequestChainStorage::get(HttpRequestHeaderConstant::X_API_KEY_LOWER);
+}
+if (!$apiKey) {
+    $apiKey = prepareApiKey($request, $context, $processor, $logger);
+}
 
 return $response->build(200, [], [
     'apiKey' => $apiKey,
 ]);
+
+
+/**
+ * @param RequestInterface $request
+ * @param ContextInterface $context
+ * @param ProcessorInterface $processor
+ * @param LoggerInterface $logger
+ * @return string
+ */
+function prepareApiKey(RequestInterface $request, ContextInterface $context, ProcessorInterface $processor, LoggerInterface $logger): string
+{
+    $apiKey = 'test-api-key';
+    RequestChainStorage::set(HttpRequestHeaderConstant::X_API_KEY_LOWER, $apiKey);
+    return $apiKey;
+}

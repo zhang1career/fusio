@@ -77,7 +77,7 @@ return [
     'sdkgen_client_id'         => env('SDKGEN_CLIENT_ID')->string(),
     'sdkgen_client_secret'     => env('SDKGEN_CLIENT_SECRET')->string(),
 
-    'psx_log_level'            => Logger::ERROR,
+    'psx_log_level'            => env('LOG_LEVEL', Logger::ERROR,)->int(),
 
     // Folder locations
     'psx_path_cache'           => __DIR__ . '/cache',
