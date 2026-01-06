@@ -1,8 +1,45 @@
-.env
+# Project
 public/
 build/fusio/
 cache/
 vendor/
+
 log
 
 .idea/
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.run/
+.vscode/
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+.cursorrules
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+log/
+*.log
+
+# Docker
+docker/
+
+# Data
+data/
+
+# Library directories
+lib/
+
+# Enviroment
+.env
