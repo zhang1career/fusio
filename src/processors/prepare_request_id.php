@@ -96,8 +96,8 @@ function prepareRequestId(RequestInterface $request, ContextInterface $context, 
     } elseif (is_object($responseData)) {
         // Convert object to array
         $result = [
-            'code' => $responseData->code ?? null,
-            'errmsg' => $responseData->message ?? null,
+            'errorCode' => $responseData->code ?? null,
+            'message' => $responseData->message ?? null,
             'data' => (array)($responseData->data ?? []),
         ];
     }
@@ -105,12 +105,12 @@ function prepareRequestId(RequestInterface $request, ContextInterface $context, 
     if (!is_array($result)) {
         throw new RuntimeException('Unexpected response format from action, expected array.');
     }
-    if (!isset($result['code']) || !isset($result['data'])) {
+    if (!isset($result['errorCode']) || !isset($result['data'])) {
         throw new RuntimeException('Response from action is missing required fields.');
     }
-    if ($result['code'] != 0) {
+    if ($result['errorCode'] != 0) {
         // Action returned an error
-        $errorMessage = $result['errmsg'] ?? 'Unknown error from action';
+        $errorMessage = $result['message'] ?? 'Unknown error from action';
         throw new RuntimeException('Action error: ' . $errorMessage);
     }
     if (!isset($result['data']['id'])) {
