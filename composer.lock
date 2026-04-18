@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b1214ec9edac24f47f8ead4a19c7fd0",
+    "content-hash": "caf18b5d73666e908941eec5b5677d1f",
     "packages": [
         {
             "name": "brick/math",
@@ -2006,16 +2006,16 @@
         },
         {
             "name": "fusio/impl",
-            "version": "v8.3.2.10",
+            "version": "v8.3.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-impl.git",
-                "reference": "531b3944a05f06068a3af96d203add4bf159bc44"
+                "reference": "76f30679a07497a3de08f7587570dc09333d8427"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/531b3944a05f06068a3af96d203add4bf159bc44",
-                "reference": "531b3944a05f06068a3af96d203add4bf159bc44",
+                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/76f30679a07497a3de08f7587570dc09333d8427",
+                "reference": "76f30679a07497a3de08f7587570dc09333d8427",
                 "shasum": ""
             },
             "require": {
@@ -2086,7 +2086,7 @@
             "description": "Fusio implementation",
             "homepage": "https://www.fusio-project.org",
             "support": {
-                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.10"
+                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.11"
             },
             "funding": [
                 {
@@ -2102,7 +2102,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-01-06T03:13:52+00:00"
+            "time": "2026-04-18T12:00:52+00:00"
         },
         {
             "name": "fusio/marketplace",
@@ -4469,16 +4469,16 @@
         },
         {
             "name": "psx/framework",
-            "version": "v7.9.1",
+            "version": "v7.9.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/apioo/psx-framework.git",
-                "reference": "3c30eef184d5b9531246df5f76dca31ba957799f"
+                "url": "https://github.com/zhang1career/psx-framework.git",
+                "reference": "635abefe40f60ef09dd7d06d42a6b76c81d4a27e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/psx-framework/zipball/3c30eef184d5b9531246df5f76dca31ba957799f",
-                "reference": "3c30eef184d5b9531246df5f76dca31ba957799f",
+                "url": "https://api.github.com/repos/zhang1career/psx-framework/zipball/635abefe40f60ef09dd7d06d42a6b76c81d4a27e",
+                "reference": "635abefe40f60ef09dd7d06d42a6b76c81d4a27e",
                 "shasum": ""
             },
             "require": {
@@ -4521,7 +4521,12 @@
                     "PSX\\Framework\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "PSX\\Framework\\Tests\\": "tests/",
+                    "PSX\\Framework\\App\\": "app/"
+                }
+            },
             "license": [
                 "Apache-2.0"
             ],
@@ -4535,43 +4540,42 @@
             "description": "Engine of the PSX framework",
             "homepage": "https://phpsx.org",
             "keywords": [
-                "PSX",
                 "api",
                 "framework",
+                "psx",
                 "rest"
             ],
             "support": {
-                "issues": "https://github.com/apioo/psx-framework/issues",
-                "source": "https://github.com/apioo/psx-framework/tree/v7.9.1"
+                "source": "https://github.com/zhang1career/psx-framework/tree/v7.9.1.1"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/fusioapi",
-                    "type": "custom"
+                    "type": "github",
+                    "url": "https://github.com/chriskapp"
                 },
                 {
-                    "url": "https://github.com/chriskapp",
-                    "type": "github"
+                    "type": "patreon",
+                    "url": "https://www.patreon.com/fusio"
                 },
                 {
-                    "url": "https://www.patreon.com/fusio",
-                    "type": "patreon"
+                    "type": "custom",
+                    "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-10-10T12:08:31+00:00"
+            "time": "2026-04-18T11:59:58+00:00"
         },
         {
             "name": "psx/http",
-            "version": "v4.0.5",
+            "version": "v4.0.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/apioo/psx-http.git",
-                "reference": "23da2fa4df2e09c9251369894fbe9c3cde6c5d92"
+                "url": "https://github.com/zhang1career/psx-http.git",
+                "reference": "c2324acd385fad7912687b1142be0924c6f9d7a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/psx-http/zipball/23da2fa4df2e09c9251369894fbe9c3cde6c5d92",
-                "reference": "23da2fa4df2e09c9251369894fbe9c3cde6c5d92",
+                "url": "https://api.github.com/repos/zhang1career/psx-http/zipball/c2324acd385fad7912687b1142be0924c6f9d7a5",
+                "reference": "c2324acd385fad7912687b1142be0924c6f9d7a5",
                 "shasum": ""
             },
             "require": {
@@ -4591,7 +4595,11 @@
                     "PSX\\Http\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "PSX\\Http\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "Apache-2.0"
             ],
@@ -4608,24 +4616,23 @@
                 "http"
             ],
             "support": {
-                "issues": "https://github.com/apioo/psx-http/issues",
-                "source": "https://github.com/apioo/psx-http/tree/v4.0.5"
+                "source": "https://github.com/zhang1career/psx-http/tree/v4.0.5.1"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/fusioapi",
-                    "type": "custom"
+                    "type": "github",
+                    "url": "https://github.com/chriskapp"
                 },
                 {
-                    "url": "https://github.com/chriskapp",
-                    "type": "github"
+                    "type": "patreon",
+                    "url": "https://www.patreon.com/fusio"
                 },
                 {
-                    "url": "https://www.patreon.com/fusio",
-                    "type": "patreon"
+                    "type": "custom",
+                    "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-09-15T10:25:21+00:00"
+            "time": "2026-04-18T11:56:57+00:00"
         },
         {
             "name": "psx/json",
