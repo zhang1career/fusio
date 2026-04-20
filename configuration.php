@@ -38,6 +38,20 @@ return [
     // the backend
     'fusio_marketplace'        => true,
 
+    // Base URL of the user center (no trailing slash), used when an operation has usability=1 (external JWT validation)
+    'ext_user_center_url'      => env('EXT_USER_CENTER_URL')->default('')->string(),
+    // Shared Redis connection used by paganini service discovery (empty REDIS_HOST disables discovery).
+    // No ->default('tcp'): Symfony compiles that to default:tcp:REDIS_SCHEME and treats `tcp` as a %parameter% name.
+    'redis_scheme'             => env('REDIS_SCHEME')->string(),
+    'redis_host'               => env('REDIS_HOST')->default('')->string(),
+    'redis_port'               => env('REDIS_PORT')->default('')->int(),
+    // Key prefix (namespace) for service registration entries in Redis, e.g. `reg:serv:`.
+    'redis_prefix_register_service' => env('REDIS_PREFIX_REGISTER_SERVICE')->default('')->string(),
+    // When ext_user_center_url contains `://{{service_key}}`, resolve host via Redis (paganini). Plain URLs skip Redis.
+    'ext_user_center_sd_memo_ttl_seconds' => env('EXT_USER_CENTER_SD_MEMO_TTL')->default('')->int(),
+    // GET path for Bearer token validation; empty uses /api/user/me/validate (see FrameworkConfig::getUserCenterMePath)
+    'ext_user_center_me_path'  => env('EXT_USER_CENTER_ME_PATH')->default('')->string(),
+
     // The public url to the apps folder (i.e. http://acme.com/apps or http://apps.acme.com)
     'fusio_apps_url'           => env('APP_APPS_URL')->string(),
 
