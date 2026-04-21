@@ -11,24 +11,17 @@
  */
 
 /**
- * Snowflake Processor
+ * Prepares X-Request-Id by calling the Snowflake ID service (POST /api/snowflake/id).
  *
- * This processor calls the lb_sf_snowflake Action and processes its response.
- *
- * Logic:
- * 1. Call Action (lb_sf_snowflake) with received parameters
- * 2. Parse the response
- * 3. If code != 0, return error; if code == 0, return data.id
- * 4. Store requestId in context
+ * Configuration: EXT_SNOWFLAKE_URL, EXT_SNOWFLAKE_ACCESS_TOKEN (JSON field access_key),
+ * and optional Redis service-discovery placeholders `://{{service_key}}` (same pattern as EXT_USER_CENTER_URL).
  */
 
+use App\Service\Snowflake\SnowflakeRequestIdClient;
 use Fusio\Adapter\Util\Component\RequestChainStorage;
-use Fusio\Adapter\Util\Component\RequestHelper;
 use Fusio\Engine\ConnectorInterface;
 use Fusio\Engine\ContextInterface;
 use Fusio\Engine\DispatcherInterface;
-use Fusio\Engine\Exception\ActionNotFoundException;
-use Fusio\Engine\Exception\FactoryResolveException;
 use Fusio\Engine\ProcessorInterface;
 use Fusio\Engine\Request\HttpRequestHeaderConstant;
 use Fusio\Engine\RequestInterface;
@@ -42,7 +35,7 @@ if (RequestChainStorage::has(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER)) {
     $requestId = RequestChainStorage::get(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER);
 }
 if (!$requestId) {
-    $requestId = prepareRequestId($request, $context, $processor, $logger);
+    $requestId = prepareRequestId($logger);
 }
 
 return $response->build(200, [], [
@@ -50,76 +43,10 @@ return $response->build(200, [], [
 ]);
 
 
-/**
- * @param RequestInterface $request
- * @param ContextInterface $context
- * @param ProcessorInterface $processor
- * @param LoggerInterface $logger
- * @return array|mixed
- */
-function prepareRequestId(RequestInterface $request, ContextInterface $context, ProcessorInterface $processor, LoggerInterface $logger): mixed
+function prepareRequestId(LoggerInterface $logger): string
 {
-    $actionName = 'lb_sf_snowflake';
-
-    // Build a new request
-    $newRequest = RequestHelper::overrideRequest(
-        $request,
-        'GET',
-        []
-    );
-
-    // Execute the action using processor
-    try {
-        $actionResponse = $processor->execute($actionName, $newRequest, $context);
-    } catch (ActionNotFoundException $e) {
-        throw new RuntimeException('Required action "' . $actionName . '" not found.', 0, $e);
-    } catch (FactoryResolveException $e) {
-        throw new RuntimeException('Failed to resolve action "' . $actionName . '".', 0, $e);
-    }
-
-    // Get the response body
-    $responseData = $actionResponse->getBody();
-    // Parse the response - it might be a string (JSON) or already an array
-    if (!is_string($responseData) && !is_array($responseData) && !is_object($responseData)) {
-        throw new RuntimeException('Unexpected response type from action: ' . gettype($responseData));
-    }
-
-    $result = null;
-    if (is_string($responseData)) {
-        $result = json_decode($responseData, true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new RuntimeException('Failed to decode JSON response: ' . json_last_error_msg());
-        }
-    } elseif (is_array($responseData)) {
-        // Response is already an array
-        $result = $responseData;
-    } elseif (is_object($responseData)) {
-        // Convert object to array
-        $result = [
-            'errorCode' => $responseData->code ?? null,
-            'message' => $responseData->message ?? null,
-            'data' => (array)($responseData->data ?? []),
-        ];
-    }
-
-    if (!is_array($result)) {
-        throw new RuntimeException('Unexpected response format from action, expected array.');
-    }
-    if (!isset($result['errorCode']) || !isset($result['data'])) {
-        throw new RuntimeException('Response from action is missing required fields.');
-    }
-    if ($result['errorCode'] != 0) {
-        // Action returned an error
-        $errorMessage = $result['message'] ?? 'Unknown error from action';
-        throw new RuntimeException('Action error: ' . $errorMessage);
-    }
-    if (!isset($result['data']['id'])) {
-        throw new RuntimeException('Response data is missing id field.');
-    }
-
-    $requestId = $result['data']['id'];
-    $logger->info('Request ID: ' . $requestId);
-
+    $requestId = SnowflakeRequestIdClient::fetchRequestId($logger);
     RequestChainStorage::set(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER, $requestId);
+
     return $requestId;
 }

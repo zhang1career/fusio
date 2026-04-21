@@ -52,6 +52,10 @@ return [
     // GET path for Bearer token validation; empty uses /api/user/me/validate (see FrameworkConfig::getUserCenterMePath)
     'ext_user_center_me_path'  => env('EXT_USER_CENTER_ME_PATH')->default('')->string(),
 
+    // Snowflake ID HTTP API (POST /api/snowflake/id). Placeholders `://{{service_key}}` use Redis like ext_user_center_url.
+    'ext_snowflake_url'           => env('EXT_SNOWFLAKE_URL')->default('')->string(),
+    'ext_snowflake_access_token'  => env('EXT_SNOWFLAKE_ACCESS_TOKEN')->default('')->string(),
+
     // The public url to the apps folder (i.e. http://acme.com/apps or http://apps.acme.com)
     'fusio_apps_url'           => env('APP_APPS_URL')->string(),
 
