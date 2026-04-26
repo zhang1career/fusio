@@ -30,6 +30,8 @@ use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
 
 // prepare requestId
+const MALL_SNOWFLAKE_ACCESS_KEY = "8860b781a29d452fb5543bd617316325";
+
 $requestId = null;
 if (RequestChainStorage::has(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER)) {
     $requestId = RequestChainStorage::get(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER);
@@ -47,7 +49,7 @@ return $response->build(200, [], [
  */
 function prepareRequestId(LoggerInterface $logger): string
 {
-    $requestId = SnowflakeRequestIdClient::fetchRequestId($logger);
+    $requestId = SnowflakeRequestIdClient::fetchRequestId($logger, MALL_SNOWFLAKE_ACCESS_KEY);
     RequestChainStorage::set(HttpRequestHeaderConstant::X_REQUEST_ID_LOWER, $requestId);
 
     return $requestId;
