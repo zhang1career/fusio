@@ -1189,16 +1189,16 @@
         },
         {
             "name": "fusio/adapter-http",
-            "version": "v6.0.8.23",
+            "version": "v6.0.8.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-adapter-http.git",
-                "reference": "ff2c9f4fe28607cc3d180e8951c76de94e15dd45"
+                "reference": "8856105f326f71edf2df1cde31ac4f893b9bf4df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-http/zipball/ff2c9f4fe28607cc3d180e8951c76de94e15dd45",
-                "reference": "ff2c9f4fe28607cc3d180e8951c76de94e15dd45",
+                "url": "https://api.github.com/repos/zhang1career/fusio-adapter-http/zipball/8856105f326f71edf2df1cde31ac4f893b9bf4df",
+                "reference": "8856105f326f71edf2df1cde31ac4f893b9bf4df",
                 "shasum": ""
             },
             "require": {
@@ -1244,7 +1244,7 @@
                 "fusio-adapter"
             ],
             "support": {
-                "source": "https://github.com/zhang1career/fusio-adapter-http/tree/v6.0.8.23"
+                "source": "https://github.com/zhang1career/fusio-adapter-http/tree/v6.0.8.25"
             },
             "funding": [
                 {
@@ -1260,7 +1260,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-04-21T08:59:41+00:00"
+            "time": "2026-05-02T10:38:36+00:00"
         },
         {
             "name": "fusio/adapter-php",
@@ -2007,16 +2007,16 @@
         },
         {
             "name": "fusio/impl",
-            "version": "v8.3.2.21",
+            "version": "v8.3.2.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-impl.git",
-                "reference": "d2a9fc01066cbc5f54fd80f6e3f4c31337f81695"
+                "reference": "eb7b939e605cab5ec732033b4564fe5e819ed9b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/d2a9fc01066cbc5f54fd80f6e3f4c31337f81695",
-                "reference": "d2a9fc01066cbc5f54fd80f6e3f4c31337f81695",
+                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/eb7b939e605cab5ec732033b4564fe5e819ed9b6",
+                "reference": "eb7b939e605cab5ec732033b4564fe5e819ed9b6",
                 "shasum": ""
             },
             "require": {
@@ -2089,7 +2089,7 @@
             "description": "Fusio implementation",
             "homepage": "https://www.fusio-project.org",
             "support": {
-                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.21"
+                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.23"
             },
             "funding": [
                 {
@@ -2105,7 +2105,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-04-21T11:30:25+00:00"
+            "time": "2026-05-02T10:24:18+00:00"
         },
         {
             "name": "fusio/marketplace",
@@ -4401,16 +4401,16 @@
         },
         {
             "name": "psx/data",
-            "version": "v7.0.1.2",
+            "version": "v7.0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/psx-data.git",
-                "reference": "b22cbe6601756967e446a317946ff8338b6a086d"
+                "reference": "1c495b59d616859dc8ccfa6edf49b871c8258dcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/psx-data/zipball/b22cbe6601756967e446a317946ff8338b6a086d",
-                "reference": "b22cbe6601756967e446a317946ff8338b6a086d",
+                "url": "https://api.github.com/repos/zhang1career/psx-data/zipball/1c495b59d616859dc8ccfa6edf49b871c8258dcd",
+                "reference": "1c495b59d616859dc8ccfa6edf49b871c8258dcd",
                 "shasum": ""
             },
             "require": {
@@ -4459,7 +4459,7 @@
                 "xml"
             ],
             "support": {
-                "source": "https://github.com/zhang1career/psx-data/tree/v7.0.1.2"
+                "source": "https://github.com/zhang1career/psx-data/tree/v7.0.1.3"
             },
             "funding": [
                 {
@@ -4475,7 +4475,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-04-26T12:59:23+00:00"
+            "time": "2026-05-02T08:20:23+00:00"
         },
         {
             "name": "psx/datetime",
@@ -4612,16 +4612,16 @@
         },
         {
             "name": "psx/framework",
-            "version": "v7.9.1.2",
+            "version": "v7.9.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/psx-framework.git",
-                "reference": "e83764d442d915f4ff53014e11de988e43b33a2e"
+                "reference": "37471fb9f9d5a74f21958f142a15e5e6d5dc5b72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/psx-framework/zipball/e83764d442d915f4ff53014e11de988e43b33a2e",
-                "reference": "e83764d442d915f4ff53014e11de988e43b33a2e",
+                "url": "https://api.github.com/repos/zhang1career/psx-framework/zipball/37471fb9f9d5a74f21958f142a15e5e6d5dc5b72",
+                "reference": "37471fb9f9d5a74f21958f142a15e5e6d5dc5b72",
                 "shasum": ""
             },
             "require": {
@@ -4689,7 +4689,7 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/zhang1career/psx-framework/tree/v7.9.1.2"
+                "source": "https://github.com/zhang1career/psx-framework/tree/v7.9.1.3"
             },
             "funding": [
                 {
@@ -4705,7 +4705,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-04-26T12:11:15+00:00"
+            "time": "2026-05-02T10:55:01+00:00"
         },
         {
             "name": "psx/http",
