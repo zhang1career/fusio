@@ -34,6 +34,7 @@
   "require": {
     "php": ">=8.1",
     "fusio/impl": "~8.3.2.0",
+    "fusio/model": "~4.3.8.0",
     "psx/framework": "~7.9.1.0",
     "psx/data": "~7.0.1.0",
     "psx/http": "~4.0.5.0",
@@ -47,6 +48,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/zhang1career/fusio-impl.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/zhang1career/fusio-model.git"
     },
     {
       "type": "vcs",

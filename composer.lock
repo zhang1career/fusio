@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ceabbae10ac2fb3e4ed74a1b05234cbc",
+    "content-hash": "930caddde3ded514c0ebeb0a8cd778f9",
     "packages": [
         {
             "name": "brick/math",
@@ -2007,16 +2007,16 @@
         },
         {
             "name": "fusio/impl",
-            "version": "v8.3.2.23",
+            "version": "v8.3.2.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhang1career/fusio-impl.git",
-                "reference": "eb7b939e605cab5ec732033b4564fe5e819ed9b6"
+                "reference": "e4948b8c2e10781a7e6034300b091e8bd80f4ed6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/eb7b939e605cab5ec732033b4564fe5e819ed9b6",
-                "reference": "eb7b939e605cab5ec732033b4564fe5e819ed9b6",
+                "url": "https://api.github.com/repos/zhang1career/fusio-impl/zipball/e4948b8c2e10781a7e6034300b091e8bd80f4ed6",
+                "reference": "e4948b8c2e10781a7e6034300b091e8bd80f4ed6",
                 "shasum": ""
             },
             "require": {
@@ -2041,7 +2041,7 @@
                 "fusio/cli": "^4.0",
                 "fusio/engine": "^6.6.1",
                 "fusio/marketplace": "^0.1",
-                "fusio/model": "^4.0",
+                "fusio/model": "~4.3.8.0",
                 "php": ">=8.1",
                 "phpstan/phpdoc-parser": "^1.0",
                 "psx/cloudevents": "^1.0",
@@ -2089,7 +2089,7 @@
             "description": "Fusio implementation",
             "homepage": "https://www.fusio-project.org",
             "support": {
-                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.23"
+                "source": "https://github.com/zhang1career/fusio-impl/tree/v8.3.2.24"
             },
             "funding": [
                 {
@@ -2105,7 +2105,7 @@
                     "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2026-05-02T10:24:18+00:00"
+            "time": "2026-05-03T11:33:30+00:00"
         },
         {
             "name": "fusio/marketplace",
@@ -2153,16 +2153,16 @@
         },
         {
             "name": "fusio/model",
-            "version": "v4.3.8",
+            "version": "v4.3.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/apioo/fusio-model.git",
-                "reference": "378723d9212212e18849ee127e0cdd41455efcae"
+                "url": "https://github.com/zhang1career/fusio-model.git",
+                "reference": "91d437482f1fad72f2b8c0b518e99c65d05e8df3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/fusio-model/zipball/378723d9212212e18849ee127e0cdd41455efcae",
-                "reference": "378723d9212212e18849ee127e0cdd41455efcae",
+                "url": "https://api.github.com/repos/zhang1career/fusio-model/zipball/91d437482f1fad72f2b8c0b518e99c65d05e8df3",
+                "reference": "91d437482f1fad72f2b8c0b518e99c65d05e8df3",
                 "shasum": ""
             },
             "require": {
@@ -2179,7 +2179,14 @@
                     "Fusio\\Model\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "generate": [
+                    "@php gen.php"
+                ],
+                "psalm": [
+                    "@php vendor/vimeo/psalm/psalm"
+                ]
+            },
             "license": [
                 "AGPL-3.0-only"
             ],
@@ -2193,24 +2200,23 @@
             "description": "Fusio generated models",
             "homepage": "https://www.fusio-project.org",
             "support": {
-                "issues": "https://github.com/apioo/fusio-model/issues",
-                "source": "https://github.com/apioo/fusio-model/tree/v4.3.8"
+                "source": "https://github.com/zhang1career/fusio-model/tree/v4.3.8.1"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/fusioapi",
-                    "type": "custom"
+                    "type": "github",
+                    "url": "https://github.com/chriskapp"
                 },
                 {
-                    "url": "https://github.com/chriskapp",
-                    "type": "github"
+                    "type": "patreon",
+                    "url": "https://www.patreon.com/fusio"
                 },
                 {
-                    "url": "https://www.patreon.com/fusio",
-                    "type": "patreon"
+                    "type": "custom",
+                    "url": "https://www.paypal.me/fusioapi"
                 }
             ],
-            "time": "2024-11-09T10:07:22+00:00"
+            "time": "2026-05-03T11:11:13+00:00"
         },
         {
             "name": "fusio/worker-sdk",
